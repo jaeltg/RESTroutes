@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Selected Task</h1>
+
+<div>
+    <p>{{selected_task.description}}</p>
+    <hr>
+    <p>{{selected_task.user.first_name}}</p>
+    <p>{{selected_task.duration}} mins</p>
+    <p>Completed? {{selected_task.completed}}</p>
+    <p><a href="/tasks/{{selected_task.id}}/edit">Edit</a></p>
+</div>
+
+{% endblock %}
